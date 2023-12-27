@@ -1,21 +1,11 @@
 #include <iostream>
-
-int Multiply(int a, int b)
-{
-	return a * b;
-}
-
-void MultiplyAndLog(int a, int b)
-{
-	int result = Multiply(a, b);
-	std::cout << result << std::endl;
-}
+#include "Log.h"
+#include "Math.h"
 
 int main()
 {
-	MultiplyAndLog(5, 8);
-	MultiplyAndLog(15, 24);
-	MultiplyAndLog(45, 72);
-
+	MultiplyAndLog(16, 38);
+	InitLog();
+	Log("Hello World");
 	std::cin.get();
 }
