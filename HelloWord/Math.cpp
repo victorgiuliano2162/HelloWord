@@ -13,4 +13,4 @@ void MultiplyAndLog(int a, int b)
 
 
 //Angular brackets <> indicam linhas de código que estão no nosso arquivo
-//Quotes " " são usadas para acessar arquivos que estão na máquina
+//Quotes " " são usadas para acessar arquivos que estão na máquina "relatives"
