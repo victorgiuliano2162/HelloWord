@@ -4,6 +4,8 @@
 
 #define LOG(x) std::cout << x << std::endl
 
+using namespace std;
+
 int main()
 {
 	int var = 400;
@@ -20,5 +22,17 @@ int main()
 
 	delete[] buffer;
 
-	std::cin.get();
+
+	int a = 10; //variável como qualquer outra
+	int* b = &a; //um ponteiro que aponta para a
+	int& c = a; //c é referência de a e b aponta para a
+	LOG(a);
+	LOG(b);
+	LOG(c);
+
+	c = 11;
+	LOG(a);
+
+
+	cin.get();
 }

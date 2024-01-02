@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 int Multiply(int a, int b)
 {
@@ -8,7 +9,7 @@ int Multiply(int a, int b)
 void MultiplyAndLog(int a, int b)
 {
 	int result = Multiply(a, b);
-	std::cout << result << std::endl;
+	cout << result << endl;
 }
 
 

@@ -1,5 +1,6 @@
 #include "Log.h"
 #include <iostream>
+using namespace std;
 
 void InitLog()
 {
@@ -8,5 +9,5 @@ void InitLog()
 
 void Log(const char* message)
 {
-	std::cout << message << std::endl;
+	cout << message << endl;
 }
