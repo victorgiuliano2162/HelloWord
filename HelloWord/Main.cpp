@@ -20,13 +20,14 @@ void Increment2(int& value)
 
 class Player
 {
+public:
 	int x, y;
 	int speed;
 
 	void Move(int xa, int ya)
 	{
-		x += xa * player.speed;
-		y += ya * player.speed;
+		x += xa * speed;
+		y += ya * speed;
 	}
 
 };
@@ -69,7 +70,8 @@ int main()
 
 	Player player;
 	player.x = 7;
-	player.Move(player, 1, -1);
+	player.Move( 1, -1);
+
 
 
 	cin.get();
