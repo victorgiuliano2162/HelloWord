@@ -6,6 +6,25 @@
 
 using namespace std;
 
+void Increment(int* value)
+{
+	(*value)++;
+	//Ao usar ponteiros preciso que minha variável seja informada junto ao símbolo de referência &
+}
+
+void Increment2(int& value)
+{
+	value++;
+	//Ao usar o símbolo de referência direto no parâmetro do método a variável pode ser informada sem alterações
+}
+
+class Player
+{
+	int x, y;
+	int speed;
+
+};
+
 int main()
 {
 	int var = 400;
@@ -23,7 +42,7 @@ int main()
 	delete[] buffer;
 
 
-	int a = 10; //variável como qualquer outra
+	int a = 5; //variável como qualquer outra
 	int* b = &a; //um ponteiro que aponta para a
 	int& c = a; //c é referência de a e b aponta para a
 	LOG(a);
@@ -33,6 +52,16 @@ int main()
 	c = 11;
 	LOG(a);
 
+	int a1 = 5;
+	Increment(&a1);
+	LOG(a1);
+	Increment2(a1);
+	LOG(a1);
+	LOG("Fim");
+
+
+	Player player;
+	player.x = 7;
 
 	cin.get();
 }
