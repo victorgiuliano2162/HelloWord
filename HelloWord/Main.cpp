@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void Increment(int* value)
+static void Increment(int* value)
 {
 	(*value)++;
 	//Ao usar ponteiros preciso que minha variável seja informada junto ao símbolo de referência &
@@ -23,13 +23,14 @@ class Player
 	int x, y;
 	int speed;
 
+	void Move(int xa, int ya)
+	{
+		x += xa * player.speed;
+		y += ya * player.speed;
+	}
+
 };
 
-void Move(Player& player, int xa, int ya)
-{
-	player.x += xa * player.speed;
-	player.y += ya * player.speed;
-}
 
 int main()
 {
@@ -68,7 +69,8 @@ int main()
 
 	Player player;
 	player.x = 7;
-	Move(player, 1, -1);
+	player.Move(player, 1, -1);
+
 
 	cin.get();
 }
