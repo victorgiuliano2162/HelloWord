@@ -25,6 +25,12 @@ class Player
 
 };
 
+void Move(Player& player, int xa, int ya)
+{
+	player.x += xa * player.speed;
+	player.y += ya * player.speed;
+}
+
 int main()
 {
 	int var = 400;
@@ -62,6 +68,7 @@ int main()
 
 	Player player;
 	player.x = 7;
+	Move(player, 1, -1);
 
 	cin.get();
 }
