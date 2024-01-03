@@ -3,6 +3,7 @@
 #include "Math.h"
 
 #define LOG(x) std::cout << x << std::endl
+#define struct class
 
 using namespace std;
 
@@ -31,7 +32,6 @@ public:
 	}
 
 };
-
 
 int main()
 {
