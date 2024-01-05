@@ -2,10 +2,14 @@
 #include "Log.h"
 #include "Math.h"
 
-#define LOG(x) std::cout << x << std::endl
-#define struct class
+#define LOG(x) std::cout << x << std::endl;
+
 
 using namespace std;
+
+
+
+// extern int s_Variable; //Pelo que entendi aqui e fica a dúvida, static só se aplicará a funções, ainda que compile, não conseguirei executar o programa com variáveis estáticas (PRECISO CONFERIR)
 
 static void Increment(int* value)
 {
@@ -71,7 +75,6 @@ int main()
 	Player player;
 	player.x = 7;
 	player.Move( 1, -1);
-
 
 
 	cin.get();
