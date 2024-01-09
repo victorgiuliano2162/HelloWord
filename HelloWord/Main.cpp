@@ -11,6 +11,19 @@ using namespace std;
 
 // extern int s_Variable; //Pelo que entendi aqui e fica a dúvida, static só se aplicará a funções, ainda que compile, não conseguirei executar o programa com variáveis estáticas (PRECISO CONFERIR)
 
+struct Entity
+{
+	int x, y;
+
+	void Print()
+	{
+		cout << "x = " << x << ", " << "y = " << y << endl;
+	}
+};
+
+//int Entity::x;
+//int Entity::y;
+
 static void Increment(int* value)
 {
 	(*value)++;
@@ -71,6 +84,15 @@ int main()
 	LOG(a1);
 	LOG("Fim");
 
+	Entity e; //Criação e inicialização da estrutura
+	e.x = 2;
+	e.y = 3;
+	e.Print();
+
+	//Que também pode ser feita da seguinte forma:
+	
+	Entity e1 = { 5, 8 };
+	e1.Print();
 
 	Player player;
 	player.x = 7;
